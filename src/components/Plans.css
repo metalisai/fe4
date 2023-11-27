@@ -1,0 +1,114 @@
+.planList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.planItem {
+  border-radius: 1rem;
+  border: 1px solid var(--accent-unimportant);
+  flex: 1;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+.planItem.active {
+  border-color: var(--accent-color);
+  background-color: var(--bg-hint);
+}
+
+.planItem h2 {
+  font-size: 1rem;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+.planItem p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.planItem .freeMonths {
+  color: var(--accent-color);
+  font-size: 0.8rem;
+}
+
+.planItem img {
+  max-width: 40%;
+  max-height: 40%;
+}
+
+.planItem div {
+  margin-top: 3rem;
+}
+
+.periodSwitch {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--bg-hint);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.periodSwitch span {
+  margin: 0 1rem;
+  color: var(--accent-unimportant);
+}
+
+.periodSwitch span.active {
+  color: var(--accent-color);
+}
+
+.toggleLabel {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: var(--accent-color);
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.toggleLabel::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: white;
+  top: 3px;
+  left: 3px;
+  transition: 0.3s;
+}
+
+.toggleSw:checked + .toggleLabel:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+}
+
+.toggleSw {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .planList {
+    flex-direction: column;
+  }
+
+  .planItem {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 2rem);
+    align-items: center;
+    margin-top: 0.4rem;
+  }
+
+  .planItem div {
+    margin: 0 1rem;
+  }
+}

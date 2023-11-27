@@ -1,0 +1,268 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5faff;
+  min-height: 100vh;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: row;
+  min-width: 800px;
+  border-radius: 2rem;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.stepView {
+  display: flex;
+  min-width: 250px;
+  min-height: 100%;
+  flex-direction: column;
+  border-radius: 1rem;
+  background-image: url("../Assets/Images/bg-sidebar-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.stepList {
+  list-style: none;
+  padding: 0;
+}
+
+.stepList span {
+  margin: 1rem;
+}
+
+.stepList li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.stepNr {
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem;
+  text-align: center;
+  display: block;
+  line-height: 2rem;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.stepNr.stepNrActive {
+  color: var(--accent-color);
+  background-color: var(--bg-hint);
+}
+
+.stepDesc {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--accent-unimportant);
+}
+
+.stepStatus {
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.formView {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  flex-grow: 1;
+  background-color: white;
+}
+
+.formStep > h1 {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+.formStep > p {
+  color: var(--accent-unimportant);
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.stepContainer {
+  display: grid;
+  overflow: hidden;
+}
+
+.formStep {
+  grid-area: 1 / 1 / 2 / 2;
+  transition: all 0.3s ease-in-out;
+}
+
+.formStep:not(.active) {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.formStep.active {
+  visibility: visible;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.formStep.next {
+  transform: translateX(100%);
+}
+
+.formStep.prev {
+  transform: translateX(-100%);
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.btnContainer.hide {
+  visibility: hidden;
+  display: none;
+}
+
+.btnContainer button {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnNext {
+  background-color: var(--accent-unselected);
+  color: #fff;
+}
+
+.btnNext:active {
+  background-color: var(--accent-color);
+}
+
+.btnBack {
+  background-color: transparent;
+  color: var(--accent-unimportant);
+}
+
+.btnBack:active {
+  color: var(--accent-color);
+}
+
+.btnConfirm {
+  background-color: var(--accent-special);
+  color: #fff;
+}
+
+.btnConfirm:active {
+  background-color: #2e1eff;
+}
+
+.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.thanks h1 {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+.thanks p {
+  max-width: 450px;
+  color: var(--accent-unimportant);
+}
+
+@media (max-width: 800px) {
+  #root {
+    font-size: 14px;
+  }
+
+  .formContainer {
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 100%;
+    padding: 0;
+    flex-grow: 1;
+    background-color: transparent;
+  }
+
+  .stepView {
+    background-image: url("../Assets/Images/bg-sidebar-mobile.svg");
+    background-size: cover;
+    border-radius: 0;
+    height: 200px;
+    padding: 1rem;
+    flex-direction: row;
+  }
+
+  .stepView .stepDesc {
+    display: none;
+  }
+
+  .stepView .stepStatus {
+    display: none;
+  }
+
+  .stepList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .stepList span {
+    margin: 0.5rem;
+  }
+
+  .stepList li {
+    padding: 0;
+  }
+
+  .formView {
+    border-radius: 1rem;
+    margin-top: -140px;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .stepContainer {
+    background-color: #fff;
+    border-radius: inherit;
+    padding: 1rem;
+    margin: 0 1rem;
+  }
+
+  .btnContainer {
+    background-color: #fff;
+    width: calc(100% - 2rem);
+    padding: 1rem;
+  }
+
+  .formStep > h1 {
+    font-size: 1.5rem;
+  }
+
+}

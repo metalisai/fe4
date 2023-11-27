@@ -1,0 +1,62 @@
+.confirmDetails {
+  margin-top: 2rem;
+  background-color: var(--bg-hint);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.confirmPlan {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.confirmPlan h2 {
+  font-size: 1rem;
+  color: var(--accent-color);
+  font-weight: 400;
+  margin: 0;
+}
+
+.confirmPlan a {
+  color: var(--accent-unimportant);
+}
+
+.planAmt {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.aName {
+  color: var(--accent-unimportant);
+}
+
+.aAmt {
+  color: var(--accent-color);
+}
+
+.spread {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.finalAmount {
+  font-size: 1.5rem;
+  color: var(--accent-special);
+  margin: 0;
+  font-weight: bold;
+}
+
+.totalName {
+  color: var(--accent-unimportant);
+  padding-left: 1rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+}

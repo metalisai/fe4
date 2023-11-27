@@ -1,0 +1,57 @@
+.infoForm input {
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #035;
+}
+
+.infoForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.infoForm div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.formError {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.infoForm label {
+  color: #035;
+}
+
+.infoForm input {
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+
+.infoForm input:focus {
+  border: 1px solid #035;
+  outline: none;
+}
+
+.infoForm input.error {
+  border: 1px solid red;
+  outline: none;
+}
+
+@media (max-width: 800px) {
+  .infoForm input {
+    margin-bottom: 1rem;
+    padding: 0.7rem;
+  }
+}
+

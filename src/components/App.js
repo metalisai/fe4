@@ -140,7 +140,7 @@ export default function App() {
           </div>
 
           <div className={`btnContainer${formData.step > steps.length ? " hide" : ""}`}>
-            <button className="btn btnBack" onClick={prevStep}>Go Back</button>
+            <button className={`btn btnBack${formData.step === 1 ? " hide" : ""}`} onClick={prevStep}>Go Back</button>
 
             {(formData.step === steps.length) 
               ? <button className="btn btnConfirm" onClick={confirm}>Confirm</button> 

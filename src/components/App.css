@@ -165,6 +165,10 @@
   color: var(--accent-color);
 }
 
+.btnBack.hide {
+  visibility: hidden;
+}
+
 .btnConfirm {
   background-color: var(--accent-special);
   color: #fff;
